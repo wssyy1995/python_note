@@ -60,8 +60,7 @@ sbg=sbgenerator()
 '''count=0
 for i in sbg:
     count += 1
-    print(i)
-    # i=sbg.__next__() 是在刚进入循环就执行的，所以要先把yield输出才能break
+    print(i)       # i=sbg.__next__() 是在刚进入循环就执行的，所以要先把yield输出才能break
     if count > 49:
         break
 

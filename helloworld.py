@@ -468,9 +468,3 @@ dic['k1']=dic['k1']+'v1v1v1'
 print(dic)
 '''
 
-def func(*args,**kwargs):
-    print('输入了')
-
-func()
-
-change
