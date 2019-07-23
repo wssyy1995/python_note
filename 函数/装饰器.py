@@ -24,7 +24,7 @@ def func():
     print('guangjing is sb')
 
 #func=timmer(func)          #先将func函数内存地址传给timmer，得到inner函数的内存地址，并重新赋值给func这个变量
-func()                     #此时func() 相当与调用inner函数，inner函数中的f()则为原来'func'的功能
+func()                     #此时func() 相当于调用inner函数，inner函数中的f()则为原来'func'的功能
 
 '''
 

@@ -167,7 +167,7 @@ s1=re.sub('([a-z][0-9])','sub',s) ,替换不需要加两次
     os.stat('dirname')  查看该目录的信息
     os.system('ls')   运行操作系统命令，直接显示
 
-    os.path.isfile('path')/isdir('path')
+    os.path.isfile('path')/isdir('path') 判断这文件是否是文件或者是文件夹？
 
 
 #sys模块：sys模块是与python解释器交互的一个接口
@@ -239,6 +239,32 @@ s1=re.sub('([a-z][0-9])','sub',s) ,替换不需要加两次
         f['key']={'int':10,'float':9.5}
         f.close()
 
+#面向对象常用模块
+（1）hashlib ：提供摘要算法（md5,sha等）的模块
+    #摘要算法：有两个字符串，哪怕有一个字符不同，则这两个字符串算出来的结果不一样
+             只要是相同的字符串，每次进行摘要算法的结果都相同
+    #应用：
+        密码的密文存储
+        文件的一致性验证：在下载的时候，检查我们下载的文件和远程服务器上的文件是否一致
+                        两台机器的两个文件，你想检查这两个文件是否相等
 
 
 
+import hashlib
+pwd = hashlib.md5()
+pwd.update(b'alex3714')
+pwd2 = hashlib.sha1()
+pwd2.update(b'wssyy,yyqx1128')
+print(pwd.hexdigest())
+print(pwd2.hexdigest())
+#摘要算法加盐
+#文件的一致性校验不需要加盐
+pwd = hashlib.md5(b'hello')
+
+
+#密码的密文存储步骤：
+#用户注册
+
+
+
+#用户的登录
