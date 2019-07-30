@@ -106,6 +106,8 @@ s1=re.sub('([a-z][0-9])','sub',s) ,替换不需要加两次
         time.time()
 
         字符串：格式化时间，给人看的
+        print(time.ctime())
+        print(time.asctime())
         print(time.strftime('%Y/%m/%d %H:%M:%S'))
 
 

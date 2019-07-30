@@ -354,8 +354,18 @@ guangjing.close
 content = sui.read()
 print(content)
 '''
+#read
+(1)read():将文章以str格式全部读出
+sui = open('suisui.text',mode='rb')
+content = sui.read()
+print(content)
+(2)readline()：
+(3)readlines()：将文章每一行的内容全部读出,放进一个list
 
 #mode
+# sui = open('suisui.text',mode='rb')
+# content = sui.read()
+# print(content)
 
 '''sui = open('suisui.text',mode='rb')
 content = sui.read()
@@ -467,4 +477,107 @@ dic['k1']=dic['k1']+'v1v1v1'
 
 print(dic)
 '''
+
+#单元测试:
+（1）测试函数
+'''
+步骤 ：
+1：导入unittest
+2：导入要测试的函数
+3：创建一个要测试这个函数的类，继承unittest.TestCase
+4:创建一个方法，一般这个方法为一条测试用例
+5：将测试数据传入测试函数，将实际结果返回给一个变量
+6：断言：  self.assertEqual(实际结果，预期结果)
+
+
+
+'''
+import unittest
+
+def get_formatted_name(first,last,middle=''):
+    if middle:
+        full_name = first + ' ' + middle + ' ' + last
+    else:full_name = first + ' '+ last
+
+    return full_name.title()
+
+
+class NameTestCase(unittest.TestCase):
+    def test_first_last_name(self):
+        formatted_name = get_formatted_name('hello','world')
+        self.assertEqual(formatted_name, 'Hello World')  # 一种断言，判断输入的结果是否与预期的结果相同
+
+    def test_first_last_name(self):
+        formatted_name = get_formatted_name('hello','world','middle')
+        self.assertEqual(formatted_name, 'Hello Middle World')  # 一种断言，判断输入的结果是否与预期的结果相同
+
+
+
+unittest.main()
+
+
+（2）测试类：
+class AnonymousSurvey():
+
+    def __init__(self, question):
+        self.question = question
+        self.responses = []
+
+    def show_question(self):
+        print(self.question)
+
+    def story_response(self, new_response):
+        self.responses.append(new_response)
+
+    def show_results(self):
+        count=1
+        print('survey results:')
+        for i in self.responses:
+            print(str(count) +':'+ i)
+            count+=1
+
+
+
+# question='what language did you first learn to speak'
+# mysurvey=AnonymousSurvey(question)
+# mysurvey.show_question()
+# print('enter q at any time to quit.\n')
+# while True:
+#     response=input('my response:')
+#     if response =='q':break
+#     mysurvey.story_response(response)
+#
+# mysurvey.show_results()
+
+
+
+import unittest
+class TestAnonymousSurvey(unittest.TestCase):
+
+
+    def setUp(self):
+        question = 'what language did you first learn to speak'
+        self.mysurvey= AnonymousSurvey(question)
+
+    def test_sotre_single_response(self):
+        response = 'English'
+        self.mysurvey.story_response(response)
+        self.assertIn(response, self.mysurvey.responses)
+
+    def test_store_three_responses(self):
+
+        responses=['english','spanish','mandarin']
+        for response in responses:
+            self.mysurvey.story_response(response)
+
+        for response in responses:
+            self.assertIn(response,self.mysurvey.responses)
+
+unittest.main()
+
+
+
+
+
+
 

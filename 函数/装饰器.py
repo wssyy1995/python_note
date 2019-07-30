@@ -156,7 +156,7 @@ func()
 #作业：
 #1：编写装饰器，为多个函数加上认证的功能（用户的账号密码来源于文件)，并且一旦登录成功，后续的函数都无需重新登录
 
-'''lag = False
+'''flag = False
 def login(func):
     def inner(*args,**kwargs):
         global Flag

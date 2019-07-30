@@ -42,12 +42,15 @@ print(apple.price)  #将原价price私有化，price方法伪装成属性，并�
 class Person:
     def __init__(self,name):
         self.__name=name
+
     @property
     def name(self):
         return self.__name
 
     @name.setter
     def name(self,new_name):
+        self.__name=new_name
+    def setname(self,new_name):
         self.__name=new_name
 
 
@@ -58,9 +61,9 @@ class Person:
 yayan=Person('yayan')
 print(yayan.name)
 yayan.name='yayansb' #执行了name.setter
-print()
+print(yayan.name)
 del yayan.name    #执行了name.deleter的方法
-print()
+print(yayan.name)
 
 
 二.method方法
