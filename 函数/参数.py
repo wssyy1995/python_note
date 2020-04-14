@@ -19,8 +19,8 @@ def classmate(name,sex='男'):
      print('{}是{}的'.format(name,sex))
 
 
-classmate('guangjing','男')
-classmate('guangjing') #如果与默认参数的值相等，则不需要传了
+classmate('koko','男')
+classmate('koko') #如果与默认参数的值相等，则不需要传了
 classmate('yayan','女')
 '''
 

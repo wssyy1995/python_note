@@ -149,14 +149,14 @@ if sbname == 'guang':
 else: print('you are cute!')
 '''
 
-'''s='guangjing is a sb'
+'''s='koko is a sb'
 s1=s.index('sb',0,5)
 print(s1)
 '''
 
 '''name= input()
 name2=name.strip()
-if name2 == 'guangjing' :
+if name2 == 'koko' :
     print('you are sb')
 else : print ('i am sb')
 '''
@@ -190,7 +190,7 @@ s3='my name is : {a} , my age is {b},my hobbie is {c}'.format(a =name,b = age,c=
 print(s+'\n'+s1+'\n'+s2+'\n'+s3)
 
 name=input('sdfjfdsdf sldjf: ')
-if 'guangjing' in name:
+if 'koko' in name:
     print('he is sb')
 '''
 
@@ -202,12 +202,12 @@ print(s2)'''
 s2=s.split()
 print(s2)
 '''
-'''l=['guangjing','yayan','suisui',[1,2,'abc']]
+'''l=['koko','yayan','suisui',[1,2,'abc']]
 print(l)
 l2=l.append(['sb',4,5,6])
 print(l2)'''
 
-'''l=['guangjing','yayan','suisui',[1,2,'abc']]
+'''l=['koko','yayan','suisui',[1,2,'abc']]
 #l.insert(1,'this is sb')
 #l.extend([1,2,3,'sb','bs'])
 #l2=l.pop(2)
@@ -219,7 +219,7 @@ print(l2)'''
 #l[3][2]=l[3][2].upper()
 print(l)'''
 
-'''l=('guangjing','yayan','suisui','papa')
+'''l=('koko','yayan','suisui','papa')
 #l[2][1]='suisuisb'
 l2='sb'.join(l)
 print(l2) '''
@@ -234,7 +234,7 @@ print(s1)
     print(i)
     '''
 
-'''dic = {'name':['guangjing','yayan'],'age':[17,18],'pet':{'petname':'suisui','petage':'6month'}}
+'''dic = {'name':['koko','yayan'],'age':[17,18],'pet':{'petname':'suisui','petage':'6month'}}
 print(dic.get('age'))
 '''
 
@@ -280,7 +280,7 @@ for i in li:
 print(dic)
 '''
 
-'''s='光景guangjing'
+'''s='光景koko'
 s1=s.encode('utf-8') # s是默认unicode编码的str，将转换为utf-8编码的bytes类型
 print(s,'\n',s1)
 '''
@@ -344,10 +344,10 @@ del dic['name']
 print(dic)
 '''
 #绝对路径
-'''guangjing=open('/Users/suyayan/Downloads/py file operation/guangjingsb.text',mode='r',encoding='utf-8')
-content = guangjing.read()
+'''koko=open('/Users/suyayan/Downloads/py file operation/kokosb.text',mode='r',encoding='utf-8')
+content = koko.read()
 print(content)
-guangjing.close
+koko.close
 '''
 #相对路径
 '''sui = open('suisui.text',mode='r',encoding='utf-8')
@@ -417,7 +417,7 @@ print(read)
 '''with open('/Users/suyayan/Downloads/py file operation/sb.text',mode='r+',encoding='utf-8') as sb1,open('/Users/suyayan/Downloads/py file operation/sb2.text',mode='w',encoding='utf-8') as sb2:
     for line in sb1:
         if 'yayan' in line:
-            line=line.replace('yayan','guangjing')
+            line=line.replace('yayan','koko')
         sb2.write(line)
 import os
 os.remove('/Users/suyayan/Downloads/py file operation/sb.text')

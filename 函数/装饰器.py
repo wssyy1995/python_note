@@ -21,7 +21,7 @@ def timmer(f):               #timmer就实现了一个装饰器的功能，f()�
 @timmer    #语法糖：在被装饰的函数定义上添加：@装饰器名字 ，相当于 func=timmer(func)
 def func():
     time.sleep(3)
-    print('guangjing is sb')
+    print('koko is sb')
 
 #func=timmer(func)          #先将func函数内存地址传给timmer，得到inner函数的内存地址，并重新赋值给func这个变量
 func()                     #此时func() 相当于调用inner函数，inner函数中的f()则为原来'func'的功能
@@ -37,7 +37,7 @@ func()                     #此时func() 相当于调用inner函数，inner函�
 
 '''def func():
     time.sleep(3)
-    print('guangjing is sb')
+    print('koko is sb')
     return 'yes ,actually!'
 
 def timmer(f):
@@ -71,7 +71,7 @@ def timmer(f):
     return inner
 
 func=timmer(func)
-func('guangjing')  #给inner的a传参
+func('koko')  #给inner的a传参
 '''
 
 #装饰器固定模式：

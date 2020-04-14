@@ -20,9 +20,9 @@ class Person():
         print('%s走走走，走了%s步'%(self.name,n))
 
 
-guangjing = Person('sb','eat',18)  #guangjing对象
-print(guangjing.name)
-guangjing.walk(10)
+koko = Person('sb','eat',18)  #koko对象
+print(koko.name)
+koko.walk(10)
 print(Person.country)
 
 #对象=类名()
@@ -36,7 +36,7 @@ print(Person.country)
 
 
 (4)类名和对象名.__dict__ ：可以查看这个类和对象的属性，对象的属性可以通过__dict__进行修改
-guangjing.__dict__['hobbie']='sleep'    相当于 guangjing.hobbie='sleep'
+koko.__dict__['hobbie']='sleep'    相当于 koko.hobbie='sleep'
 __dict__对于类中的名字不能进行操作
 
 
