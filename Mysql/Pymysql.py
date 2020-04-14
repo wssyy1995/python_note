@@ -7,7 +7,7 @@ password=input('password:')
 
 
 #连接mysql
-mscon=pymysql.connect(host='localhost',user='root',password='wssyy,yyqx1128',database='yayandb1')
+mscon=pymysql.connect(host='localhost',user='root',password='wxxxx,yyqxxxx8',database='yayandb1')
 
 cursor=mscon.cursor()
 
