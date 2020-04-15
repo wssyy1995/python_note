@@ -110,7 +110,7 @@ class Teather:
     dic={'查看老师':'show_teather','查看学生':'show_student'}
     number=2
     def show_teather(self):
-        print('teather is guangjign')
+        print('teather is koko')
 
     def show_student(self):
         print('student is yayan')

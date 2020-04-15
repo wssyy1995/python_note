@@ -1,0 +1,5 @@
+DEBUG:root:yy debug message
+INFO:root:yy info message
+WARNING:root:yy warning message
+ERROR:root:yy error message
+CRITICAL:root:yy critical message

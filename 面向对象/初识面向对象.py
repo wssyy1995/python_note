@@ -91,15 +91,15 @@ class Course:
     def __init__(self,name,price):
         self.name=name
         self.price=price
-(2)更改这个类的静态属性
+(2)更改这个类的静态属性（惊）
 Course.language='English'
 
 (3)创建一个这个类的对象，这个对象也能调用这个类的静态属性
 #    对象的命名空间通过类对象指针，指向类的命名空间
 #    每当对象调用一个属性时，先会在自己的命名空间里找(对象命名空间里有的，就直接用自己的)，如果找不到，就去类的命名空间里找
-#    如果在类的命名空间里找到了，会在自己的命名空间里用相同的值生成新的这个属性，之后再通过对象调用这个静态属性，就直接用自己命名空间里的
 #   如果需要删除这个属性  del
 python=Course('python',1000)
+# 如果为对象的language属性重新赋值，就不再指向类静态属性的地址了
 python.language='japanese'
 print(python.language)
 del python.language
