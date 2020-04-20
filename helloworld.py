@@ -280,7 +280,7 @@ for i in li:
 print(dic)
 '''
 
-'''s='光景koko'
+'''s='koko'
 s1=s.encode('utf-8') # s是默认unicode编码的str，将转换为utf-8编码的bytes类型
 print(s,'\n',s1)
 '''

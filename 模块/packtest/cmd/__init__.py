@@ -1,1 +1,0 @@
-from packtest.cmd import cmdtest

@@ -4,6 +4,7 @@
 
 
 
+
 #(1)作用域相关
 '''1.globals() #查看全局作用域中所有的名字
 2.locals()  #查看局部作用域中所有的名字
@@ -117,23 +118,26 @@ for i in zip(l,l2):
 
 def is_odd(x):
     return x%2==1
-ret = filter(is_odd,[1,2,3,4,5,6,7]) #返回一个过滤器类型，实现了__iter__和__next__方法，相当于一个迭代器，可以用for循环将每个迭代的元素放入判断函数，如果值是True，才返回
+ret = filter(is_odd,[1,2,3,4,5,6,7])
+#返回一个过滤器类型，实现了__iter__和__next__方法，相当于一个迭代器，可以用for循环将每个迭代的元素放入判断函数，如果值是True，才返回
+# 也可以通过ret=list(ret)转换成列表
 for i in ret:
     print(i)
 
-3.map(参数1：函数名,参数二：可迭代对象)：依次将可迭代对象里的元素引应用到参数1的函数中
+3.map(参数1：函数名,参数二：可迭代对象)：依次将参数二内的元素引应用到参数1的函数中,返回的值的类型仍然是参数二
 ret=map(abs,[1,-4,-5,2,-9])
+# map函数返回一个map类型，可以用for循环，也可以用list()转换为列表
 for i in ret:
     print(i)
 
-相当于：
-for i in [1,-4,-5,2,-9]:
-    print(abs(i))
 
+# python3之后，reduce 不再作为内含函数，而是放到functools ：from functools import reduce
+# reduce(参数1：函数，参数二:可迭代对象)：依次将可迭代对象里的元素引应用到参数1的函数中，参数1接受两个元素，上两个元素的结果将作为第一个参数，与下一个元素继续传入；
+# 返回值是参数二元素的一个聚合结果
+a=[1,2,3,4,5,6,7]
+suma=reduce(lambda x,y:x+y,a)
+suma=28
 
-reduce(参数1：函数，参数二:可迭代对象)：依次将可迭代对象里的元素引应用到参数1的函数中，但是参数1接受两个元素，上两个元素的结果将作为第一个参数，与下一个元素继续传入
-l=[1,2,3,4,5,6]
-sum(1,2)
 
 
 
@@ -143,3 +147,8 @@ sum(1,2)
 list=['    ',[1,2],'hello world']
 ret= sorted(list,key=len)
 print(ret)
+
+
+# 字典根据value值排序
+dict = {'a':1,'b':2,'c':3,'d':4,'e':3,'f':1,'g':7}
+sorted_dict_asc = sorted(dict.items(),key=lambda item:item[1])

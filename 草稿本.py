@@ -45,6 +45,84 @@
 # # print(ret)
 #
 #
+#
+# 输入: ["5","-2","4","C","D","9","+","+"]
+# 输出: 27
+# 解释:
+# 第1轮：你可以得到5分。总和是：5。
+# 第2轮：你可以得到-2分。总数是：3。
+# 第3轮：你可以得到4分。总和是：7。
+# 操作1：第3轮的数据无效。总数是：3。
+# 第4轮：你可以得到-4分（第三轮的数据已被删除）。总和是：-1。
+# 第5轮：你可以得到9分。总数是：8。
+# 第6轮：你可以得到-4 + 9 = 5分。总数是13。
+# 第7轮：你可以得到9 + 5 = 14分。总数是27。
+#
+
+
+
+ops=["-60","D","-36","30","13","C","C","-33","53","79"]
+
+
+def score(ops):
+
+
+
+
+
+    print(ops2)
+
+
+    #
+    # for i in range(len(ops2)):
+    #     if ops2[i]=='D':
+    #         ops2[i]=2*ops2[i-1]
+    #
+    #
+    #
+    #     elif ops2[i]=='+':
+    #         ops2[i]= ops2[i-1]+ops2[i-2]
+    #
+    #     else:
+    #         ops2[i]=int(ops2[i])
+    #         print('数字字符串: %r'%(i))
+    #     score=score+ops2[i]
+    #
+    #
+    # return score
+
+
+
+
+
+print(score(ops))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # #
 # # class Tree():
 # #     def __init__(self,value=None,left=None,right=None):
@@ -152,6 +230,32 @@
 # print(english.s_list)
 
 
+#
+#
+# from functools import reduce
+# a=[1,2,4]
+# b=[6,7,8]
+# print(a)
+#
+# def cheng(x,y):
+#     return x*y
+#
+# c=reduce(cheng,a)
+# print(c)
 
+# a = [('a',1),('b',2),('c',3),('d',4)]
+# a_1 = listmap(lambda x:x[0],a)
+# print(a_1)
 
-import
+#
+# def is_odd(x):
+#     return x%2==1
+# ret = list(filter(is_odd,[1,2,3,4,5,6,7]))
+# print(ret)
+#返回一个过滤器类型，实现了__iter__和__next__方法，相当于一个迭代器，可以用for循环将每个迭代的元素放入判断函数，如果值是True，才返回
+# for i in ret:
+# #     print(i)
+# from functools import reduce
+# a=[1,2,3,4,5,6,7]
+# suma=reduce(lambda x,y:x+y,a)
+# print(suma)
